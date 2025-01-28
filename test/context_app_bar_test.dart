@@ -7,7 +7,7 @@ void main() {
   test('ContextAppBar initialized as a PreferredSizeWidget', () {
     final aCAB = ContextAppBar(
         appbarSelector: ValueNotifier<int>(0),
-        children: [AppBar(key: ValueKey(0))]);
+        children: [AppBar(key: UniqueKey())]);
     expect(aCAB.preferredSize, Size.fromHeight(kToolbarHeight));
   });
 
@@ -20,8 +20,8 @@ void main() {
           appBar: ContextAppBar(
             appbarSelector: appbarSelector,
             children: [
-              AppBar(key: ValueKey(1), title: Text('The first appbar')),
-              AppBar(key: ValueKey(2), title: Text('The second appbar')),
+              AppBar(key: UniqueKey(), title: Text('The first appbar')),
+              AppBar(key: UniqueKey(), title: Text('The second appbar')),
             ],
           ),
         ),
@@ -48,11 +48,11 @@ void main() {
             appbarSelector: appbarSelector,
             animated: false,
             children: [
-              AppBar(key: ValueKey(1), title: Text('The first appbar')),
-              AppBar(key: ValueKey(2), title: Text('The second appbar')),
-              AppBar(key: ValueKey(3), title: Text('The thrid appbar')),
+              AppBar(key: UniqueKey(), title: Text('The first appbar')),
+              AppBar(key: UniqueKey(), title: Text('The second appbar')),
+              AppBar(key: UniqueKey(), title: Text('The thrid appbar')),
               AppBar(
-                key: ValueKey(4),
+                key: UniqueKey(),
                 title: Text('The fourth appbar'),
                 actions: [
                   IconButton(onPressed: null, icon: Icon(Icons.time_to_leave)),
@@ -98,22 +98,21 @@ void main() {
             animated: false,
             children: [
               AppBar(
-                  key: ValueKey(1),
+                  key: UniqueKey(),
                   backgroundColor: Colors.green,
                   title: Text('The first appbar')),
               AppBar(
-                  key: ValueKey(2),
+                  key: UniqueKey(),
                   backgroundColor: Colors.green,
                   title: Text('The second appbar')),
               AppBar(
-                key: ValueKey(3),
-                title: Text('The thrid appbar'),
-                backgroundColor: Colors.red,
-              ),
+                  key: UniqueKey(),
+                  backgroundColor: Colors.red,
+                  title: Text('The thrid appbar')),
               AppBar(
-                key: ValueKey(4),
-                title: Text('The fourth appbar'),
+                key: UniqueKey(),
                 backgroundColor: Colors.blue,
+                title: Text('The fourth appbar'),
                 actions: [
                   IconButton(
                       onPressed: () {
