@@ -7,7 +7,8 @@ library;
 import 'package:flutter/material.dart';
 
 class ContextAppBar extends StatefulWidget implements PreferredSizeWidget {
-  /// Creates a contextual app bar which .
+  /// Collects standard app bar widgets and displays one of them specificied
+  /// by an index.
   ///
   /// The property [children] must contains one or more app bars.
   ///

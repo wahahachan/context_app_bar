@@ -13,19 +13,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: ContextAppBar(
-            appbarSelector: appbarSelector,
-            children: [
-              AppBar(key: ValueKey(1), title: Text('The first appbar')),
-              AppBar(key: ValueKey(2), title: Text('The second appbar')),
-              AppBar(key: ValueKey(3), title: Text('The thrid appbar')),
-              AppBar(key: ValueKey(4), title: Text('The fourth appbar')),
-            ],
-          ),
-          floatingActionButton: FloatingActionButton(onPressed: () {
+        appBar: ContextAppBar(
+          appbarSelector: appbarSelector,
+          children: [
+            AppBar(
+                key: UniqueKey(), // Any key that is unique to other app bars
+                title: Text('The first appbar'),
+                backgroundColor: Colors.green),
+            AppBar(
+                key: UniqueKey(),
+                title: Text('The second appbar'),
+                backgroundColor: Colors.red),
+            AppBar(
+                key: UniqueKey(),
+                title: Text('The thrid appbar'),
+                backgroundColor: Colors.blue),
+            AppBar(
+                key: UniqueKey(),
+                title: Text('The fourth appbar'),
+                backgroundColor: Colors.grey),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
             appbarSelector.value = (appbarSelector.value + 1) % 4;
-          })),
+          },
+          child: Icon(Icons.add),
+        ),
+      ),
     );
   }
 }
