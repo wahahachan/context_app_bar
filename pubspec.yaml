@@ -1,7 +1,11 @@
 name: context_app_bar
 description: "A contextual app bar for flutter. This widget allows switching between standard app bar widgets triggered by a value notifier."
 version: 1.0.0
-
+homepage: https://github.com/wahahachan/context_app_bar
+repository: https://github.com/wahahachan/context_app_bar
+topics: 
+  - widget
+  - appbar
 
 environment:
   sdk: ">=3.0.0 <5.0.0"
