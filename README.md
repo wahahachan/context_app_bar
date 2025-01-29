@@ -4,9 +4,9 @@ Context app bar is a widget that helps creating an interactive app bar with nati
 
 ## Features
 
-* Incorporate flutter native app bar widget. You enjoy all the features provided by material and is thus future-proof.
-* Automatic and animated switching between app bars. (Optional, can be turn off)
-* Easy to integrate. The switching is triggered by a value notifier, you don't need to worried about heavy and tangled message dispaching between widgets and the app bar.
+* Incorporate flutter native app bar widget. You enjoy all the features provided by the original material app bar and is thus future-proof.
+* Automatic and animated switching between app bars. (Optional animation, can be disabled)
+* Easy to integrate. The switching is triggered by a value notifier, you don't need to worry about heavy and tangled message dispaching between widgets and the app bar.
 * No other dependencies. This widget is built solely based on material flutter widget and follows common  implementation standard.
 
 ## Getting started
