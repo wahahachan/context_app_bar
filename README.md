@@ -9,23 +9,6 @@ Context app bar is a widget that helps creating an interactive app bar with nati
 * Easy to integrate. The switching is triggered by a value notifier, you don't need to worry about heavy and tangled message dispaching between widgets and the app bar.
 * No other dependencies. This widget is built solely based on material flutter widget and follows common  implementation standard.
 
-## Getting started
-
-Follow these steps to use this package
-
-### Add dependency
-
-```yaml
-dependencies:
-  context_app_bar: ^1.0.0
-```
-
-### Add import package
-
-```dart
-import 'package:context_app_bar/context_app_bar.dart';
-```
-
 ## Usage
 
 Define a integer typed value notifier, this is our remote control. The app bar collection counts from zero.
