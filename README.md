@@ -92,7 +92,7 @@ floatingActionButton: FloatingActionButton(
 
 And you are good to go.
 
-![simple demo](https://file+.vscode-resource.vscode-cdn.net/home/joe/learn/ContextualAppBar/context_app_bar/example/example_gifs/float_button_simple.gif)
+![simple demo](https://github.com/wahahachan/context_app_bar/blob/main/example/example_gifs/float_button_simple.gif?raw=true)
 
 ## Complete sample code
 
