@@ -1,13 +1,13 @@
 Context app bar is a widget that helps creating an interactive app bar with native flutter app bar implementation.
 
-![simple demo](example/example_gifs/float_button_simple.gif)
+![simple demo](https://github.com/wahahachan/context_app_bar/blob/main/example/example_gifs/float_button_simple.gif?raw=true)
 
 ## Features
 
 * Incorporate flutter native app bar widget. You enjoy all the features provided by material and is thus future-proof.
 * Automatic and animated switching between app bars. (Optional, can be turn off)
 * Easy to integrate. The switching is triggered by a value notifier, you don't need to worried about heavy and tangled message dispaching between widgets and the app bar.
-* No other dependencies libraries. This widget is built solely based on material flutter widget and follows common  implementation standard.
+* No other dependencies. This widget is built solely based on material flutter widget and follows common  implementation standard.
 
 ## Getting started
 
@@ -28,7 +28,7 @@ import 'package:context_app_bar/context_app_bar.dart';
 
 ## Usage
 
-Define a integer typed value notifier, this is our remote control. The app bars counts from zero.
+Define a integer typed value notifier, this is our remote control. The app bar collection counts from zero.
 
 ```dart
 ValueNotifier<int> appbarSelector = ValueNotifier(0);
@@ -45,6 +45,7 @@ AppBar(
 ```
 
 Warp the original `AppBar` widget with the `ContextAppBar` widget like this.
+
 Turns
 
 ```dart
@@ -78,7 +79,7 @@ Scaffold(
 ),
 ```
 
-Lets assums you would like to switch to another `AppBar` when users click a floating action button. Just assign a new value to the `appbarSelector` variable.
+Let's assums you would like to switch to another `AppBar` when users click a floating action button. Just assign a new value to the `appbarSelector` variable.
 
 ```dart
 floatingActionButton: FloatingActionButton(
@@ -150,6 +151,6 @@ class MyApp extends StatelessWidget {
 
 Feel free to report issues or suggest improvement.
 
-A more detailed example that shows a contextual app bar switching based on selected items can be found here.
+A more detailed example that shows a contextual app bar switching based on selected items can be found [here](https://github.com/wahahachan/context_app_bar/tree/main/example).
 
-![simple demo](example/example_gifs/list_selection_demo.gif)
+![select listed item demo](https://github.com/wahahachan/context_app_bar/blob/main/example/example_gifs/list_selection_demo.gif?raw=true)
