@@ -1,4 +1,4 @@
-This example will walk you though how to create a contextual appbar that reacts to user selections.
+This example will walk you through how to create a contextual app bar that can react to user selections.
 
 To start with, define a value notifier that act as a remote control, together with some state variables. They can lying within any scope as long as your widgets have access to them.
 
@@ -43,7 +43,7 @@ Scaffold(
   body: // .... rest of the application
 ```
 
-In the body, defines a `ListView` and add a few `ListTile`s where each of them are indexed and would respond to long press gresture.
+In the body, define a `ListView` and add a few `ListTile`s where each of them are indexed and would respond to long press gesture.
 
 ```dart
 body: Center(
@@ -82,6 +82,5 @@ child: ListView(
 This statement `appbarSelector.value = selectedCount > 0 ? 1 : 0` triggers the contextual app bar to switch to the second app bar(indexed as 1), when the number of selected items is greater than `0`.
 
 ![select listed item demo](https://github.com/wahahachan/context_app_bar/blob/main/example/example_gifs/list_selection_demo.gif?raw=true)
-
 
 A complete code sample of this tutorial can be found in the [list_selection_example.dart](https://github.com/wahahachan/context_app_bar/blob/main/example/lib/list_selection_example.dart).

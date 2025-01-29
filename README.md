@@ -149,7 +149,7 @@ class MyApp extends StatelessWidget {
 
 ## Last but not least...
 
-Feel free to report issues or suggest improvement.
+Please feel free to report any issues or suggest improvements.
 
 A more detailed example that shows a contextual app bar switching based on selected items can be found [here](https://github.com/wahahachan/context_app_bar/tree/main/example).
 
