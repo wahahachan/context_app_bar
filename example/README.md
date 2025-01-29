@@ -11,7 +11,7 @@ int selectedCount = 0;
 List<bool> selected = List<bool>.filled(8, false);
 ```
 
-In this application, we would like to have 2 app bars, one shows the app title while the other shows the number of items selected. The later app bar only appears if a user selected at least one listed item by long pressing.
+In this application, we would like to have 2 app bars, one shows the app title while the other shows the number of items selected. The later app bar only appears if a user selected at least one listed item by long pressing. Remember to **add a unique key** to each of these 2 app bars.
 
 ```dart
 Scaffold(
