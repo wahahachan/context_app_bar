@@ -11,13 +11,13 @@ Context app bar is a widget that helps creating an interactive app bar with nati
 
 ## Usage
 
-Define a integer typed value notifier, this is our remote control. The app bar collection counts from zero.
+Define an integer typed value notifier, this is our remote control. The app bar collection is a 0-indexed array.
 
 ```dart
 ValueNotifier<int> appbarSelector = ValueNotifier(0);
 ```
 
-The following shows a typically definition of material app bar. You **must** provide a unique key manually in order to use animated switching, which is enabled by default. Common ways of adding a key inclue `ValueKey`, `UniqueKey`, `ObjectKey` or `GlobalKey`. You can learn more [here](https://api.flutter.dev/flutter/foundation/Key-class.html).
+The following shows a typically definition of material app bar. You **must** provide a unique key manually in order to use animated switching, which is enabled by default. Common ways of adding a key include `ValueKey`, `UniqueKey`, `ObjectKey` or `GlobalKey`. You can learn more [here](https://api.flutter.dev/flutter/foundation/Key-class.html).
 
 ```dart
 AppBar(

@@ -1,6 +1,6 @@
 This example will walk you through how to create a contextual app bar that can react to user selections.
 
-To start with, define a value notifier that act as a remote control, together with some state variables. They can lying within any scope as long as your widgets have access to them.
+To start with, define a value notifier that act as a remote control, together with some state variables. They can stay within any scope as long as your widgets have access to them.
 
 ```dart
 // A globally defined integer, accessable in the builder function
