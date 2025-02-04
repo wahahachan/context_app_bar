@@ -11,25 +11,13 @@ Context app bar is a widget that helps creating an interactive app bar with nati
 
 ## Usage
 
-Define an integer typed value notifier, this is our remote control. The app bar collection is a 0-indexed array.
+Define an integer typed value notifier, this is our remote control. The value of it denotes the index of the appbar ought to be displayed from within a 0-indexed app bar array.
 
 ```dart
 ValueNotifier<int> appbarSelector = ValueNotifier(0);
 ```
 
-The following shows a typically definition of material app bar. You **must** provide a unique key manually in order to use animated switching, which is enabled by default. Common ways of adding a key include `ValueKey`, `UniqueKey`, `ObjectKey` or `GlobalKey`. You can learn more [here](https://api.flutter.dev/flutter/foundation/Key-class.html).
-
-```dart
-AppBar(
-  key: UniqueKey(), // Any key that is unique to other app bars
-  title: Text('The first appbar'),
-  backgroundColor: Colors.green,
-),
-```
-
-Warp the original `AppBar` widget with the `ContextAppBar` widget like this.
-
-Turns
+The following shows typically definition of a material app bar initialized with a custom key. You **must** provide a unique key manually in order to use animated switching, which is enabled by default. Common ways of adding a key include `ValueKey`, `UniqueKey`, `ObjectKey` or `GlobalKey`. You can learn more [here](https://api.flutter.dev/flutter/foundation/Key-class.html).
 
 ```dart
 Scaffold(
@@ -41,7 +29,7 @@ Scaffold(
 ),
 ```
 
-into
+Warp the original `AppBar` widget with the `ContextAppBar` widget like this.
 
 ```dart
 Scaffold(
@@ -62,7 +50,7 @@ Scaffold(
 ),
 ```
 
-Let's assums you would like to switch to another `AppBar` when users click a floating action button. Just assign a new value to the `appbarSelector` variable.
+Let's assums you would like to switch to another `AppBar` when a user clicks a floating action button. This can be achived by assigning another index to the `appbarSelector` variable in the `onPressed` handler.
 
 ```dart
 floatingActionButton: FloatingActionButton(
@@ -73,7 +61,7 @@ floatingActionButton: FloatingActionButton(
 )
 ```
 
-And you are good to go.
+Since the variable `appbarSelector` is a `ChangeNotifier`, any changes are captured and processed automatically. And you are good to go.
 
 ![simple demo](https://github.com/wahahachan/context_app_bar/blob/main/example/example_gifs/float_button_simple.gif?raw=true)
 
