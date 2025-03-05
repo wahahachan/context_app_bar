@@ -11,6 +11,37 @@ void main() {
     expect(aCAB.preferredSize, Size.fromHeight(kToolbarHeight));
   });
 
+  test('ContextAppBar initialized with out key 1', () {
+    expect(
+        () => ContextAppBar(
+            appbarSelector: ValueNotifier<int>(0), children: [AppBar()]),
+        throwsAssertionError);
+  });
+
+  test('ContextAppBar initialized with out key 2', () {
+    expect(
+        () => ContextAppBar(appbarSelector: ValueNotifier<int>(0), children: [
+              AppBar(key: UniqueKey()),
+              AppBar(key: UniqueKey()),
+              AppBar(),
+              AppBar(key: UniqueKey())
+            ]),
+        throwsAssertionError);
+  });
+
+  test('ContextAppBar initialized with out key 3', () {
+    final aCAB = ContextAppBar(
+        appbarSelector: ValueNotifier<int>(0),
+        animated: false,
+        children: [
+          AppBar(key: UniqueKey()),
+          AppBar(key: UniqueKey()),
+          AppBar(),
+          AppBar(key: UniqueKey())
+        ]);
+    expect(aCAB.preferredSize, Size.fromHeight(kToolbarHeight));
+  });
+
   testWidgets('ContextAppBar initialized with 2 AppBar Widget', (tester) async {
     ValueNotifier<int> appbarSelector = ValueNotifier(0);
 

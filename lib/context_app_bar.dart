@@ -28,6 +28,11 @@ class ContextAppBar extends StatefulWidget implements PreferredSizeWidget {
     this.animated = true,
     this.animationDuration = const Duration(milliseconds: 280),
   })  : assert(children.isNotEmpty),
+        assert(
+          animated == false ||
+              children.every((PreferredSizeWidget w) => w.key != null),
+          'Every AppBar should have a key if animation is enabled.',
+        ),
         preferredSize = children[0].preferredSize;
 
   /// A listenable that helps the widget to detects the need for switching app bar.
