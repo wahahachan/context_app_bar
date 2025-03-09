@@ -17,7 +17,7 @@ Define an integer typed value notifier, this is our remote control. The value of
 ValueNotifier<int> appbarSelector = ValueNotifier(0);
 ```
 
-The following shows typically definition of a material app bar initialized with a custom key. You **must** provide a unique key manually in order to use animated switching, which is enabled by default. Common ways of adding a key include `ValueKey`, `UniqueKey`, `ObjectKey` or `GlobalKey`. You can learn more [here](https://api.flutter.dev/flutter/foundation/Key-class.html).
+The following shows a typical definition of a material app bar initialized with a custom key. You **must** provide a unique key manually in order to use animated switching, which is enabled by default. Common ways of adding a key include `ValueKey`, `UniqueKey`, `ObjectKey` or `GlobalKey`. You can learn more [here](https://api.flutter.dev/flutter/foundation/Key-class.html).
 
 ```dart
 Scaffold(
