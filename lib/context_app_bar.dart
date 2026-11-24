@@ -4,7 +4,7 @@
 
 library;
 
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ContextAppBar extends StatefulWidget implements PreferredSizeWidget {
   /// Collects standard app bar widgets and displays one of them specificied
